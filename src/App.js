@@ -6,7 +6,7 @@ function App() {
           <img width={40} height={40} alt="" src="/img/logo.png" />
           <div>
             <h3 className="text-uppercase">React Sneakers</h3>
-            <p>Магазин лучших кроссовок в Казани</p>
+            <p className="opacity-5">Магазин лучших кроссовок в Казани</p>
           </div>
         </div>
         <ul className="d-flex">
@@ -19,10 +19,19 @@ function App() {
           </li>
         </ul>
       </header>
+
       <div className="content p-40">
-        <h1 className="mb-40">Все кроссовки</h1>
+        <div className="d-flex align-center justify-between mb-40">
+          <h1>Все кроссовки</h1>
+          <div className="search-block d-flex">
+            <img src="/img/search.svg" alt="Search" />
+            <input placeholder="Поиск ..." />
+          </div>
+        </div>
+
         <div className="d-flex">
           <div className="card">
+            <img src="/img/heart-unliked.svg" alt="Unliked" />
             <img width={133} height={112} src="/img/sneakers/1.png" alt="Sneakers" />
             <h5>Мужские кроссовки Nike Blazer Mid Suede</h5>
             <div className="d-flex justify-between align-center">
