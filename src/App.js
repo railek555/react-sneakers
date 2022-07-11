@@ -1,9 +1,13 @@
+import Card from './components/Card';
+
 function App() {
   return (
     <div className="wrapper clear">
-      <div className="overlay">
+      <div style={{ display: 'none' }} className="overlay">
         <div className="drawer">
-          <h2 className="mb-30">Корзина</h2>
+          <h2 className="mb-30 d-flex justify-between">
+            Корзина <img className="cu-p" src="/img/btn-remove.svg" alt="RemoveCart" />
+          </h2>
 
           <div className="items flex">
             <div className="cartItem d-flex align-center mb-20">
@@ -50,7 +54,9 @@ function App() {
                 <b>1074 руб.</b>
               </li>
             </ul>
-            <button>Оформить заказ</button>
+            <button className="greenButton">
+              Оформить заказ <img src="/img/arrow.svg" alt="Arrow" />
+            </button>
           </div>
         </div>
       </div>
@@ -84,22 +90,8 @@ function App() {
         </div>
 
         <div className="d-flex">
-          <div className="card">
-            <div className="favorite">
-              <img src="/img/heart-unliked.png" alt="Unliked" />
-            </div>
-            <img width={133} height={112} src="/img/sneakers/1.png" alt="Sneakers" />
-            <h5>Мужские кроссовки Nike Blazer Mid Suede</h5>
-            <div className="d-flex justify-between align-center">
-              <div className="d-flex flex-column">
-                <span>Цена</span>
-                <b>12 990 руб.</b>
-              </div>
-              {/* <button className="button"> */}
-              <img className="button" src="/img/plus.svg" alt="Plus" />
-              {/* </button> */}
-            </div>
-          </div>
+          <Card />
+          <Card />
         </div>
       </div>
     </div>
