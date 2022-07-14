@@ -1,6 +1,7 @@
 import Card from './components/Card';
 import Header from './components/Header';
 import Drawer from './components/Drawer';
+import React from 'react';
 
 const arr = [
   {
@@ -22,23 +23,8 @@ const arr = [
 ];
 
 function App() {
-  let count = 4;
-
-  const plus = () => {
-    count++;
-  };
-
-  const minus = () => {
-    count--;
-  };
-
   return (
     <div className="wrapper clear">
-      <div>
-        <h1>{count}</h1>
-        <button onClick={plus}>+</button>
-        <button onClick={minus}>-</button>
-      </div>
       <Drawer />
       <Header />
       <div className="content p-40">
